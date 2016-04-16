@@ -10,15 +10,14 @@
 #import "XMTabBar.h"
 
 
-
 #pragma mark -  @implementation XMTabBarController
 
 @interface XMTabBarController()<TabBarViewDelegate>
+
 @property (nonatomic, strong)XMTabBar * tabBarView;
-/**
- *  记录上次点击按钮的索引
- */
+/** 记录上次点击按钮的索引 */
 @property (nonatomic, assign) NSUInteger lastIndex;
+
 @end
 
 
@@ -29,7 +28,10 @@
                             titles:(NSMutableArray *)titles{
     if ([super init]) {
         
-        self.tabBarView = [[XMTabBar alloc]initWithItemSelectedImages:selected normalImages:normal titles:titles];
+        self.tabBarView = [[XMTabBar alloc]initWithItemSelectedImages:selected
+                                                         normalImages:normal
+                                                               titles:titles];
+        
         self.tabBarView.backgroundColor = [UIColor whiteColor];
         self.tabBarView.delegate = self;
         [self.view addSubview:self.tabBarView];
@@ -84,7 +86,7 @@
 -(void)tabBarViewCenterItemClick:(UIButton *)button{
     [self presentViewController:_xm_centerViewController animated:YES completion:nil];
 }
-#pragma mark - 共有方法
+#pragma mark - 公有方法
 -(void)showCenterViewController:(BOOL)show animated:(BOOL)animated{
     
     if (show) {

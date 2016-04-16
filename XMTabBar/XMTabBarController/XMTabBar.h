@@ -36,6 +36,7 @@
 - (id)initWithItemSelectedImages:(NSMutableArray *)selected
                     normalImages:(NSMutableArray *)normal
                           titles:(NSMutableArray *)titles;
+
 -(void)tabBarBadgeValue:(NSUInteger)value item:(NSInteger)index;
 
 @end

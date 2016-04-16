@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @protocol XMTabBarControllerDelegate <NSObject>
-
 @optional
 -(void)xm_selectedViewController:(UIViewController *)viewController;
 @end
@@ -18,7 +17,7 @@
 
 @interface XMTabBarController : UITabBarController
 
-
+/** 选中状态的item，默认选中的是第0个 */
 @property (nonatomic, assign) NSInteger selectedItem;
 
 /** 是否显示中间按钮，默认为NO */
@@ -36,8 +35,12 @@
 @property (nonatomic, weak) id<XMTabBarControllerDelegate>XMDelegate;
 
 
+
 /**
  *  指定item设置badgeValue
+ *
+ *  @param value badgeValue的值
+ *  @param index 第几个
  */
 -(void)tabBarBadgeValue:(NSUInteger)value item:(NSInteger)index;
 
@@ -51,6 +54,15 @@
  */
 -(void)showCenterViewController:(BOOL)show animated:(BOOL)animated;
 
+
+/**
+ *  初始化tabbar
+ *
+ *  @param selected 选中时的图片
+ *  @param normal   普通状态下的图片
+ *  @param titles   标题
+ *
+ */
 - (id)initWithTabBarSelectedImages:(NSMutableArray *)selected
                       normalImages:(NSMutableArray *)normal
                             titles:(NSMutableArray *)titles;

@@ -27,14 +27,26 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     
-    NSMutableArray * array = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"tab_buddy_nor.png"],[UIImage imageNamed:@"tab_me_nor.png"],[UIImage imageNamed:@"tab_qworld_nor.png"],[UIImage imageNamed:@"tab_recent_nor.png"], nil];
-    NSMutableArray * selectedArray = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"tab_buddy_press.png"],[UIImage imageNamed:@"tab_me_press.png"],[UIImage imageNamed:@"tab_qworld_press.png"],[UIImage imageNamed:@"tab_recent_press.png"], nil];
-    NSMutableArray * titles = [[NSMutableArray alloc]initWithObjects:@"首页",@"消息",@"发现",@"个人", nil];
+    NSMutableArray * array = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"tab_buddy_nor.png"],
+                                                                    [UIImage imageNamed:@"tab_me_nor.png"],
+                                                                    [UIImage imageNamed:@"tab_qworld_nor.png"],
+                                                                    [UIImage imageNamed:@"tab_recent_nor.png"], nil];
+    
+    NSMutableArray * selectedArray = [[NSMutableArray alloc]initWithObjects:[UIImage imageNamed:@"tab_buddy_press.png"],
+                                                                            [UIImage imageNamed:@"tab_me_press.png"],
+                                                                            [UIImage imageNamed:@"tab_qworld_press.png"],
+                                                                            [UIImage imageNamed:@"tab_recent_press.png"], nil];
+    
+    NSMutableArray * titles = [[NSMutableArray alloc]initWithObjects:@"首页",
+                                                                     @"消息",
+                                                                     @"发现",
+                                                                     @"个人", nil];
     
     XMOneViewController * vc1 = [[XMOneViewController alloc]init];
     XMTwoViewController * vc2 = [[XMTwoViewController alloc]init];
     XMThreeViewController * vc3 = [[XMThreeViewController alloc]init];
     XMFourViewController * vc4 = [[XMFourViewController alloc]init];
+    
     UINavigationController * nav2 = [[UINavigationController alloc]initWithRootViewController:vc2];
     UINavigationController * nav3 = [[UINavigationController alloc]initWithRootViewController:vc3];
 
