@@ -64,12 +64,7 @@
 
 
 
-@interface XMButton : UIButton
 
-@property (nonatomic, assign) NSUInteger badgeValue;
-+ (instancetype)xm_shareButton;
-
-@end
 
 
 
