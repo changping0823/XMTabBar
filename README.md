@@ -33,4 +33,11 @@
     self.tabBar.xm_centerViewController = [[XMTestViewController alloc] init];
     /**  添加badgeValue */
     [self.tabBar tabBarBadgeValue:345 item:2];
-self.window.rootViewController = self.tabBar;
+    self.window.rootViewController = self.tabBar;
+    
+    
+    
+演示图如下
+![image](https://github.com/changping0823/XMXMLYFM/blob/master/XMTabBar/ScreenShots/73af1b5b27f7882f52bcd84bd3f97178.gif)
+ 
+
